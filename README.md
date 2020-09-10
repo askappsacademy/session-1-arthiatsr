@@ -64,4 +64,4 @@ https://developer.mozilla.org/en-US/docs/Glossary/Semantics
 1. Add some css3 properties and animations to the video element and make it more enhanced like nicer background color, border radius, transitions on hover, etc
 
 ## License 
-© 2020 Ask Applications, Inc. an IAC Company. All rights reserved
+© 2020 Ask Applications, Inc. an IAC Company. All rights reserved 

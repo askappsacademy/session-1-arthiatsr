@@ -10,3 +10,15 @@ h1.sticky{
   color:white;
 
 }
+.videoborder{
+  box-sizing:border-box;
+  background-color: red;
+}
+.floatleft{
+  float:left;
+}
+.floatright{
+  margin: auto;
+  padding:10px;
+  /* float:right; */
+}

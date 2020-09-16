@@ -13,10 +13,6 @@ h1.sticky{
 h1 {
   text-shadow: 10px red;
 }
-#videolist{
-  overflow-y: auto;
-
-}
 .videoborder{
   box-sizing:border-box;
     

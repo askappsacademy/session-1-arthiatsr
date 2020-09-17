@@ -26,6 +26,12 @@ h1 {
 
     
 }
+
+.hovervid:hover{
+   border: 50px solid red;
+}
+	
+
 .floatleft{
   float:left;
   width:50%;

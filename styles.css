@@ -14,12 +14,16 @@ h1 {
   text-shadow: 5px 7px deepskyblue;
 }
 #videolist{
+  height: 500px;
   overflow: scroll;
   
 
 }
 .videoborder{
   box-sizing:border-box;
+  border: 5px solid red;
+  height: 200px;
+
     
 }
 .floatleft{

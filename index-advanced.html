@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Video Player Application</title>
-  <link rel="stylesheet" href="styles-advanced.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
@@ -10,22 +10,26 @@
         <h1 class="sticky">My Video Player</h1>
     </header>
     <div id="video">
-        <div>
-          <ul class="videoborder">
+        <div id="videolist">
+          <div class="videoborder">
+            <ul>              
+              <li class="floatleft">
+                <video class="hovervid" controls="controls" preload='none' width="300"
+                  poster="https://i.vimeocdn.com/video/349464671_295x166.jpg?r=pad">
+                  <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4' />
+                </video>
+              </li>
+              <div class="floatright">
+                <li>title: Hello</li>
+                <li>description: Made by Matthijs Vlot. www.mattatjeoorlog.nl www.facebook.com/ant1mat3rie www.twitter.com/yomattie</li>  
+              </div> 
+                     
+            </ul>
+          </div>  
+          <div class="videoborder">
+          <ul>
             <li class="floatleft">
-              <video controls="controls" preload='none' width="300"
-                poster="https://i.vimeocdn.com/video/349464671_295x166.jpg?r=pad">
-                <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4' />
-              </video>
-            </li>
-            <div class="floatright">
-              <li>title: Hello</li>
-              <li>description: Made by Matthijs Vlot. www.mattatjeoorlog.nl www.facebook.com/ant1mat3rie www.twitter.com/yomattie</li>  
-            </div>          
-          </ul>
-          <ul class="videoborder">
-            <li class="floatleft">
-              <video controls="controls" preload='none' width="300" poster="https://i.vimeocdn.com/video/567120156_295x166.jpg?r=pad">
+              <video class="hovervid" controls="controls" preload='none' width="300" poster="https://i.vimeocdn.com/video/567120156_295x166.jpg?r=pad">
               <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/mp4' /></video>
             </li>
             <div class="floatright">
@@ -33,9 +37,11 @@
               <li>description: This video was shot over a 5 day trip to Tokyo in January 2016. It was my first time visiting Japan.</li>    
             </div>        
           </ul>
-          <ul class="videoborder">
+          </div>
+          <div class="videoborder">
+          <ul>
             <li class="floatleft">
-              <video controls="controls" preload='none' width="300" poster="https://i.vimeocdn.com/video/421792571_295x166.jpg?r=pad">
+              <video class="hovervid" controls="controls" preload='none' width="300" poster="https://i.vimeocdn.com/video/421792571_295x166.jpg?r=pad">
               <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/mp4' /></video>
             </li>   
             <div class="floatright">           
@@ -43,9 +49,11 @@
               <li>description: Hello World! Processing is a documentary on creative coding.</li>      
             </div>   
           </ul>
-          <ul class="videoborder">
+          </div>
+          <div class="videoborder">
+          <ul>
             <li class="floatleft">
-              <video controls="controls" preload='none' width="300"
+              <video class="hovervid" controls="controls" preload='none' width="300"
                 poster="https://i.vimeocdn.com/video/609372175_295x166.jpg?r=pad">
                 <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4' />
               </video>
@@ -54,10 +62,12 @@
               <li>title: Hello world</li>
               <li>description: Animation / Mikhail Sedov. Sound design / Andrea Damiano</li>    
             </div>
-          </ul>          
-          <ul class="videoborder">
+          </ul> 
+          </div>    
+          <div class="videoborder">     
+          <ul>
             <li class="floatleft">
-              <video controls="controls" preload='none' width="300"
+              <video class="hovervid" controls="controls" preload='none' width="300"
                 poster="https://i.vimeocdn.com/video/650019737_295x166.jpg?r=pad">
                 <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4' />
               </video>
@@ -67,6 +77,7 @@
               <li>description: I traveled to Iceland and drove the Ring Road, May–June 2017. It was my second time returning to Iceland.</li>
             </div>            
           </ul>
+          </div>
         </div>
 
     </div>

@@ -13,24 +13,22 @@ h1.sticky{
 h1 {
   text-shadow: 5px 7px deepskyblue;
 }
-#videolist{
-  height: 500px;
-  overflow: scroll;
-  
+#videolist{  
+  height: 600px;
+  overflow: scroll;  
 
 }
-.videoborder{
-  box-sizing:border-box;
-  border: 5px solid red;
-  height: 200px;
-
-    
-}
-
 .hovervid:hover{
    border: 50px solid red;
 }
-	
+.videoborder{
+box-sizing:border-box;
+border: 5px solid red;
+width:500px;
+height: 200px;
+float:right;   
+clear:both; 
+}
 
 .floatleft{
   float:left;
@@ -39,8 +37,10 @@ h1 {
 
 }
 .floatright{  
-  float:right;
+  float:left;
   width:50%;
   clear:right; 
 }
+
+
 

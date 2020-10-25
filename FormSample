@@ -1,0 +1,214 @@
+import React from 'react';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import { messageData } from './data';
+import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
+import {BLACK,WHITE} from './theme';
+import SideImage from './SideImage';
+import HelpTips from './HelpTips';
+import { Divider } from '@material-ui/core';
+
+type Option = {
+  id: string;
+  questionOption: string;
+}
+
+interface QuestionSets {
+  qid: string;
+  question?: string;
+  option?: Array<Option>;
+  url?: string;
+}
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    options: {
+      width: 500,      
+      position: "relative",
+      left:theme.spacing(6),
+      backgroundColor:WHITE,
+    },
+    
+    margin: {
+      height: theme.spacing(3),
+    },
+    title: {
+      textAlign: "center",
+      color: BLACK,
+      position: "relative",
+      left:0,
+      top:10,
+    },
+    body: {
+      flexGrow: 1,
+      backgroundColor: theme.palette.primary.main,
+      height: 550,
+      width: 1357,
+      position:"relative",
+      top:0,
+      left:0,
+    },  
+  }),
+);
+
+export default function Options() {
+
+  const classes = useStyles();
+  const [radio, setRadio] = React.useState();
+        
+  const handleChange = (e:any) => {
+    setRadio(e.target.value);   
+  };  
+
+  let questionHead: string="";  
+
+  return (
+    <div className={classes.body}>   
+      <Grid container direction="column" spacing={3}>
+        <Grid item xs={12}>
+          <Divider />           
+        </Grid>
+      <Grid container direction="column" spacing={3}>
+        <Grid item xs={4}>
+          {radio}           
+        </Grid>
+        <Grid item xs={6}>
+          <Typography  variant="h4" component="h4" className={classes.title}>
+            {questionHead}
+          </Typography> 
+        </Grid>
+        </Grid>
+        <Grid container >
+          <Grid item xs={3}>
+            <SideImage />
+          </Grid> 
+          <Grid item xs={6}>
+            {messageData.map((msg:any, msgkey:any) => {
+            if(msg.qid === "11"){
+              questionHead = msg.question;
+              console.log(questionHead);
+            return (
+                <div >                
+                  {/* <Grid container alignItems="flex-end">   */}                                
+                    <FormControl component="fieldset" >
+                      <FormLabel component="legend" >                      
+                      </FormLabel>                                  
+                      <RadioGroup aria-label="option" name="option" value={radio} onChange={handleChange} >
+                        {msg.option.map((opt:any, optkey:any) => {
+                            return(                          
+                                // <Grid item xs={12} >
+                                  <div >
+                                    <Paper className={classes.options} elevation={3} square={false}>
+                                      <FormControlLabel 
+                                        value={opt.questionOption} 
+                                        checked={radio==opt.questionOption}
+                                        control={<Radio />} 
+                                          label={opt.questionOption} />                          
+                                    </Paper>                                
+                                  </div>                   
+                                // </Grid>                          
+                              );
+                        })}
+                      </RadioGroup>                                      
+                    </FormControl> 
+                  {/* </Grid>                          */}
+                </div>
+            );
+          }
+          })}     
+        </Grid>        
+        <Grid item xs={3}>
+          <HelpTips />
+        </Grid>
+      </Grid>        
+    </Grid>      
+  </div>
+  );
+}
+
+
+
+// export const messageData = 
+//  [
+//     {
+//         "qid": "11", 
+//         "question": "How r u", 
+//         "option": [
+//             {    
+//                 "id": "1",    
+//                 "questionOption": "I am fine"
+    
+//             },    
+//             {
+//                 "id": "2",    
+//                 "questionOption": "I am not fine" 
+//             },    
+//             {   
+//                 "id": "3",    
+//                 "questionOption": "other" 
+//             },//             
+//         ],
+//         "url": "?"
+//     }   
+
+// ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+     
+    
+    
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
